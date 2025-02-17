@@ -24,3 +24,10 @@ function atualizarLista(){
         lista.appendChild(item);
     }
 }
+
+function sortearAmigo(){
+    let indiceAleatorio = Math.floor(Math.random()*amigos.length);
+    return sorteio [indiceAleatorio];
+}
+
+alert (sortearAmigo())
