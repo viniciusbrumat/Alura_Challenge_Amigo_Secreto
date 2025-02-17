@@ -26,8 +26,16 @@ function atualizarLista(){
 }
 
 function sortearAmigo(){
-    let indiceAleatorio = Math.floor(Math.random()*amigos.length);
-    return sorteio [indiceAleatorio];
-}
+    if (amigos.length < 2){
+        alert("Adicione pelo menos dois amigos para realizar o sorteio.");
+        return;
+    }
 
-alert (sortearAmigo())
+    let indiceAleatorio = Math.floor(Math.random() * amigos.length);
+    let amigoSorteado = amigos[indiceAleatorio];
+    
+    resultadoSorteio = document.getElementById('resultado');
+    resultadoSorteio.innerHTML = `O amigo sorteado foi: ${amigoSorteado}`;
+    console.log(amigoSorteado);
+    console.log(indiceAleatorio);
+}
